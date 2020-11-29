@@ -15,8 +15,9 @@ void init_tv(general_t *general)
     general->spawn.spawner[general->i].rect.height = 110;
     general->spawn.spawner[general->i].rect.width = 147;
     general->spawn.spawner[general->i].pos.x = ((rand() % 1700) - 300)*-1;
-    general->spawn.spawner[general->i].pos.y = ((rand() % 900) - 200);
-    general->spawn.spawner[general->i].texture = sfTexture_createFromFile("assets/tvsprite.png", NULL);
+    general->spawn.spawner[general->i].pos.y = (rand() % 700);
+    general->spawn.spawner[general->i].texture =
+    sfTexture_createFromFile("assets/tvsprite.png", NULL);
     general->spawn.spawner[general->i].sprite = sfSprite_create();
     sfTexture_setRepeated(general->spawn.spawner[general->i].texture, sfTrue);
 }

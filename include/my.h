@@ -73,13 +73,16 @@ typedef struct general {
     int i;
 }general_t;
 
-
+void init_all(general_t *general, sfRenderWindow *window);
+void set_window(general_t general);
 void tele_changer(general_t *general, sfMouseButtonEvent mouse);
-void window_event(sfRenderWindow* window, general_t *general, sfMouseButtonEvent mouse);
+void window_event(sfRenderWindow* window, 
+general_t *general, sfMouseButtonEvent mouse);
 void moove_sprite(sfIntRect *rect, int offset);
 void moove_items(tele_t *tele);
 void tv_spawner();
 void put_sound(general_t *general);
+int info_display(int argc, char **argv);
 
 void create_cursor(sfRenderWindow *window, general_t *general);
 void update_cursor(const sfRenderWindow *window, cursor_t cursor);

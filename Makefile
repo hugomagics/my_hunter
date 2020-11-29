@@ -11,11 +11,12 @@ OBJ	=	$(SRC:.c=.o)
 
 CC	=	gcc
 
-SRCP	=	$(wildcard *.c)
+SRCP	=	./*.c \
+			./src/*.c
 
 CFLAGS	=	-o $(PRJ) -I./include -L./lib/my/ -lmy -L/usr/include/SFML -lcsfml-window -lcsfml-graphics -lcsfml-system -lcsfml-audio
 
-PRJ	=	hunter
+PRJ	=	my_hunter
 
 LIB	=	libmy.a
 
